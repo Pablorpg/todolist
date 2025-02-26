@@ -123,3 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('ID da atividade não foi encontrado');
     }
 });
+    

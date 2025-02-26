@@ -157,3 +157,27 @@ const editItem = async (id) => {
 formCad.addEventListener("submit", handleFormSubmit);
 document.addEventListener("DOMContentLoaded", listItems);
 
+function validarFormulario() {
+
+  const campoName = document.getElementById("name")
+  const campoDescricao = document.getElementById("description")
+  const vall = document.getElementById("vali")
+  const vall1 = document.getElementById("vali1")
+
+  const validarName = campoName.value
+  const validarDescricao = campoDescricao.value
+  
+  if (validarName.length < 5) {
+    vall.style.color = "red";
+    vall.textContent = "A descrição deve ter pelo menos 5 caracteres:";
+  } else {
+    vall.textContent = ""
+  }
+
+  if (validarDescricao.length < 5) {
+    vall1.style.color = "red";
+    vall1.textContent = "Preencha o campo nome corretamente com 5 caracteres ou mais:";
+  } else {
+    vall1.textContent = "";
+  }
+}
